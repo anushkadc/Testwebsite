@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SPID4</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baumans&family=Eagle+Lake&family=Estonia&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Saira:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+ <!-- AOS CSS -->
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+
+<!-- Swiper CSS -->
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+<!-- Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<style>
+  body{
+    margin-top: 100px;
+  }
+
+    .Design_head {
+      text-align: center;
+      color: #183B4E;
+      font-size: 2.8rem;
+      font-weight: 700;
+      margin: 3rem 0 1rem;
+    }
+
+    .video-title {
+      color: #183B4E;
+      font-size: 2.2rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    .video-title.left {
+      text-align: center;
+    }
+
+    .video-title.right {
+      text-align: center;
+    }
+
+    .video-stack-wrapper {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 2rem;
+      padding: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .video-container {
+      flex: 1 1 45%;
+      padding: 1rem;
+      background-color: #f9f9f9;
+      border-radius: 10px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .video-container video {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    .studio-description {
+      max-width: 90%;
+      margin: 2rem auto;
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color:white;
+      background-color: #183b4e;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    }
+
+    video:fullscreen::backdrop {
+  background-color: transparent;
+  opacity: 0.3;
+}
+
+video.fullscreen-blur::before {
+  content: '';
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  filter: blur(60px) brightness(0.6);
+  background-size: cover;
+  background-position: center;
+  opacity: 0.3;
+}
+
+  
+
+    @media (max-width: 768px) {
+      .video-stack-wrapper {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+      }
+
+      .video-title.left,
+      .video-title.right {
+        text-align: center;
+      }
+
+      .video-container {
+        flex: 1 1 100%;
+        max-width: 100%;
+      }
+    }
+
+</style>
+</head>
+<body>
+ <header>
+   
+    <div class="logo">
+          <a href="index.html"><img src="images\logoSPID.png"></a>
+        </div>
+ <div class="nav_box">
+   <button class="hamburger" onclick="toggleMenu()">☰</button>
+    <nav class="navbar" id="navbar">
+      <a href="home.html">Home</a>
+      <div class="dropdown">
+        <span class="dropdown-label" onclick="toggleDropdown(this)">About
+          <span class="arrow">&#9662;</span>
+        </span>
+
+        <div class="dropdown-content">
+          <a href="aboutUS.html#aboutspid">About Us</a>
+          <a href="aboutUS.html#Founders">Team</a>
+          <a href="aboutUS.html#Achievements">Achievements</a>
+          <a href="aboutUS.html#Certificates">Certificates</a>
+        </div>
+      </div>
+    <div class="dropdown">
+  <span class="dropdown-label" onclick="toggleDropdown(this)">Products
+    <span class="arrow">&#9662;</span>
+  </span>
+  <div class="dropdown-content">
+    <a href="Products.html#Fabrics">Fabrics </a>
+    <a href="Products.html#Trad">Traditional Wear</a>
+    <a href="Products.html#ApparelRange">Apparel Range</a>
+  </div>
+</div>
+
+      <a href="Manufacturing.html">Manufacturing</a>
+       <a href="Studio.html">Studio</a>
+      <a href="markets.html">Global Reach</a>
+      <a href="Events.html">Events</a>
+      <a href="ContactUs.html">Contact Us</a>
+      
+    </nav>
+  </header>
+</div>
+
+<div class="color-strip"></div>
+  
+   <div class="video-stack-wrapper">
+      <!-- Design Studio -->
+      <div class="video-container" data-aos="fade-right" data-aos-duration="1000">
+        <h3 class="video-title left" data-aos="fade-right" data-aos-duration="1000">Design Studio</h3>
+        <div class="color-strip1"></div>
+        <div>&nbsp;</div>
+        <video controls>
+          <source src="videos/Studio/design_studio.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+
+      <!-- Apparel Studio -->
+      <div class="video-container" data-aos="fade-left" data-aos-duration="1000">
+        <h3 class="video-title right" data-aos="fade-left" data-aos-duration="1000">Apparel Studio</h3>
+        <div class="color-strip1"></div>
+        <div>&nbsp;</div>
+        <video controls>
+          <source src="videos\Studio\apparel_video.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+
+    <div class="studio-description" data-aos="fade-up" data-aos-duration="1000">
+      <p >
+        At the heart of our brand is a deep commitment to storytelling through prints and garment designs.
+        The journey of transforming an idea into a creative print or a tangible garment is dynamic.
+        Each design is thoughtfully crafted, blending imagination with technical precision.
+      </p>
+      <p>
+        Prints are central to our brand language. We sketch, refine and digitalize motifs, experimenting with patterns and colourways.
+        Simultaneously, we design garments with overall concept. Technical drawings, pattern development and sourcing are handled to ensure both form and function.
+      </p>
+      <p>
+        Our collections are presented through curated lookbooks that reflect the essence of the process — from idea, to sketch, to creation.
+      </p>
+    </div>
+  </section>
+
+<div class="color-strip_footer"></div>
+<footer class="footer">
+  <div class="footer-container">
+  <img src="images/footer/A.jpg">
+  </div>
+</footer>
+</footer>
+<script>
+  const video = document.getElementById('myVideo');
+
+document.addEventListener('fullscreenchange', () => {
+  if (document.fullscreenElement === video) {
+    video.classList.add('fullscreen-blur');
+
+    // Use the current frame of the video as the background
+    const canvas = document.createElement('canvas');
+    canvas.width = video.videoWidth;
+    canvas.height = video.videoHeight;
+    const ctx = canvas.getContext('2d');
+    ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+    const frameData = canvas.toDataURL();
+
+    // Set background image to the frame
+    video.style.setProperty('--video-blur', url(${frameData}));
+    document.documentElement.style.setProperty('--video-blur', url(${frameData}));
+
+    // Override the pseudo-element background
+    video.style.setProperty('background-image', url(${frameData}));
+    video.style.setProperty('background-size', cover);
+    video.style.setProperty('background-position', center);
+  } else {
+    video.classList.remove('fullscreen-blur');
+    video.style.removeProperty('background-image');
+  }
+});
+</script>
+
+<script src='animation.js'></script>
+
+
+<!-- AOS JS -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+</body>
+</html>
+
+

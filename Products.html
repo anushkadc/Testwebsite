@@ -1,0 +1,1380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SPID4</title>
+
+  
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baumans&family=Eagle+Lake&family=Estonia&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Saira:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+
+
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+
+  <!-- AOS CSS -->
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+ <link rel="stylesheet" href="style.css" />
+<style>
+  
+        html{
+          scroll-padding: 100px;
+        }
+
+.pro_box_img {
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  z-index: 2;
+  margin-top: 100px;
+}
+
+.pro_box_img img {
+  width: 100%;
+  height: auto;
+  display: block;
+  z-index: 2;
+}
+
+
+
+.product_info li{
+ 
+ 
+
+  font-weight: 400;
+  font-size: 200;
+}
+/*Traditional Wear*/
+.product-grid-section-trad {
+  max-width: 1500px;      /* Controls the total width of the grid */
+  margin: 0 auto;         /* Centers the grid horizontally */
+  padding: 0 1rem;   
+  margin-top: 20px;  
+  margin-bottom: 40px;   /* Optional: slight padding on mobile */
+}
+
+.product_grid-trad {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);  /* 3 cards in a row */
+  gap: 2rem;
+}
+
+@media (max-width: 992px) {
+  .product_grid-trad {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .product_grid-trad{
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
+.product-grid-section {
+  max-width: 1200px;      /* Controls the total width of the grid */
+  margin: 0 auto;         /* Centers the grid horizontally */
+  padding: 0 1rem;   
+  margin-top: 20px;     /* Optional: slight padding on mobile */
+}
+
+.product_grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);  /* 3 cards in a row */
+  gap: 2rem;
+}
+
+@media (max-width: 992px) {
+  .product_grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .product_grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+.product_card_single {
+  background-color: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.4s ease;
+  position: relative;
+  z-index: 1;
+
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.product_card_single {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease;
+}
+
+.product_card_single.reveal {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.product_card_single:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+.product_card_single img {
+  width: 100%;
+  height: 280px;
+  object-fit:cover;
+  z-index: 1;
+}
+
+.product_info {
+  padding: 1.2rem 1rem;
+}
+
+.product_info h3 {
+  font-size: 1.3rem;
+  color: #183B4E;
+  margin-bottom: 0.8rem;
+  border-bottom: 2px solid ;
+  padding-bottom: 4px;
+}
+.product_info h3::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 5px;
+  width: 100%;
+  background: linear-gradient(to right, #E52020, #FBA518, #7E1891, #A6F1E0);
+}
+
+.product_info ul {
+  list-style: disc;
+  padding-left: 1.2rem;
+  margin: 0;
+  color: #333;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.product_info ul ul {
+  list-style-type: circle;
+  margin-top: 0.5rem;
+}
+.apparel-range-section {
+  padding: 4rem 2rem;
+
+}
+
+
+.apparel-heading {
+  text-align: center;
+  margin-top: 3rem;
+
+}
+
+.apparel-heading h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #183B4E;
+  letter-spacing: 1px;
+
+}
+
+
+.apparel-section h2 {
+  font-size: 24px;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #183B4E;
+ 
+  text-align: center;
+}
+
+.value-cards-container {
+  width: 100%;
+  overflow-x: hidden;
+  position: relative;
+  white-space: nowrap;
+}
+
+
+@keyframes scroll-left {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%); /* Half the total width if duplicated */
+  }
+}
+
+.value-card {
+  min-width: 250px; /* card size */
+  flex: 0 0 auto;
+}
+
+.scroller-wrapper {
+      overflow: hidden;
+      position: relative;
+    }
+
+@keyframes scroll-left {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+.scroller {
+  display: flex;
+  white-space: nowrap; /* Keeps the cards in a single line */
+  
+}
+
+.value-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+  width: 360px;
+  text-align: center;
+  flex-shrink: 0; /* Prevent shrinking of cards */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+    scroll-snap-align: center;
+}
+
+.value-card img {
+  width: 100%;
+  height: auto;
+  max-height: 380px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+.apparel-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+
+}
+
+.apparel-carousel-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap:30px;
+  padding: 30px;
+
+}
+
+.carousel-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+
+
+}
+
+
+
+.category-title {
+      text-align: center;
+      font-weight: bold;
+      margin: 20px 0 10px;
+      color: #333;
+    }
+   
+   .apparel-category {
+  background: white;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+  width: 100%; /* Makes it responsive */
+  max-width: 360px; /* Restrict it from growing too large */
+  justify-content: center;
+  flex-wrap:wrap ;
+  align-items: center;
+}
+
+    .category-label {
+      text-align: center;
+      font-size: 1.2rem;
+      margin-top: 10px;
+      color: #555;
+    }
+
+.category-card h5 {
+  margin: 0;
+  padding: 10px 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+
+
+.carousel-item img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain; /* Keeps aspect ratio while filling the space */
+  max-height: 600px;
+
+}
+
+@media (max-width: 768px) {
+  .carousel-item img {
+    max-height: 400px; /* Adjust for smaller devices */
+  }
+}
+
+.category-row {
+  display: flex;
+  justify-content: center;
+  gap: 10px; /* Space between cards */
+  flex-wrap: wrap; /* Allows responsiveness on smaller screens */
+  margin-top: 20px;
+}
+
+
+/* Responsive for smaller devices */
+@media (max-width: 760px) {
+  .apparel-card {
+    width: 100%;
+    max-width: 300px;
+  }
+
+.scroller {
+  display: flex;
+  white-space: nowrap; /* Keeps the cards in a single line */
+   overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch; /* Smooth scroll on iOS */
+  scroll-behavior: smooth;
+
+  }
+}
+
+.apparel-card:hover {
+  transform: scale(1.05);
+}
+
+.about_box_img {
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.about_box_img img {
+  width: 100%;
+  height: auto;
+  display: block;
+  z-index: 2;
+}
+
+.overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 1rem 2rem;
+  font-size: 3vw; /* Scales with screen width */
+  font-weight: bold;
+  text-align: center;
+  border-radius: 8px;
+  white-space: nowrap;
+
+}
+@media (max-width: 480px) {
+  .overlay-text {
+    font-size: 3vw;
+    padding: 0.3rem 1rem;
+  }
+
+}
+
+
+@media (max-width: 1350px) {
+  .apparel-carousel-grid{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+
+
+@media only screen and (max-width: 500px) {
+
+ .overlay-text {
+    font-size: 3vw; /* Larger font on small screens */
+    padding: 0.3rem 1.2rem;
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.85);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.pro_box_img{
+  opacity: 0;
+  transform: scale(0.85);
+  transition: all 0.8s ease;
+}
+
+.pro_box_img.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.scroll-hint {
+  font-size: 14px;
+  color: #333; /* or #fff */
+  opacity: 0.7;
+  animation: pulse 1.6s infinite;
+  margin-top: 8px;
+  text-align: center;
+
+  display: none; /* hidden by default */
+}
+
+
+@media (max-width: 760px) {
+  .scroll-hint {
+    display: block; /* show only on small screens */
+  }
+}
+
+@keyframes pulse {
+  0% { opacity: 0.3; }
+  50% { opacity: 1; }
+  100% { opacity: 0.3; }
+}
+
+
+
+
+
+
+
+
+
+</style>
+</head>
+<body>
+  <header>
+   
+    <div class="logo">
+          <a href="index.html"><img src="images\logoSPID.png"></a>
+        </div>
+ <div class="nav_box">
+   <button class="hamburger" onclick="toggleMenu()">☰</button>
+    <nav class="navbar" id="navbar">
+      <a href="home.html">Home</a>
+      <div class="dropdown">
+        <span class="dropdown-label" onclick="toggleDropdown(this)">About
+          <span class="arrow">&#9662;</span>
+        </span>
+
+        <div class="dropdown-content">
+          <a href="aboutUS.html#aboutspid">About Us</a>
+          <a href="aboutUS.html#Founders">Team</a>
+          <a href="aboutUS.html#Achievements">Achievements</a>
+          <a href="aboutUS.html#Certificates">Certificates</a>
+        </div>
+      </div>
+    <div class="dropdown">
+  <span class="dropdown-label" onclick="toggleDropdown(this)">Products
+    <span class="arrow">&#9662;</span>
+  </span>
+  <div class="dropdown-content">
+    <a href="Products.html#Fabrics">Fabrics </a>
+    <a href="Products.html#Trad">Traditional Wear</a>
+    <a href="Products.html#ApparelRange">Apparel Range</a>
+  </div>
+</div>
+
+      <a href="Manufacturing.html">Manufacturing</a>
+      <a href="Studio.html">Studio</a>
+      <a href="markets.html">Global Reach</a>
+      <a href="Events.html">Events</a>
+      <a href="ContactUs.html">Contact Us</a>
+      
+    </nav>
+  </header>
+</div>
+  <!--color strip option
+ <div class="color-strip">
+  <div class="color-block red"></div>
+  <div class="color-block yellow"></div>
+  <div class="color-block purple"></div>
+  <div class="color-block blue"></div>
+</div>
+</div>-->
+
+ <div class="color-strip"></div>
+
+<section id="Fabrics">
+
+  <div class="pro_box_img" >
+  <img src="images/Products/product_bg.webp" alt="Product Range">
+ <section class="hidden"> <div class="overlay-text">Product Range</div></section>
+</div>
+   
+    <div>&nbsp;</div>
+ <section class="hidden"><div class="rest_head"  data-aos="fade-left" data-aos-duration="1000">Fabrics</div></section>
+  <div class="color-strip1"></div>
+
+ <section class="product-grid-section" data-aos="fade-up" data-aos-duration="1000">
+
+  <div class="product_grid">
+    
+    <!-- Cotton Fabrics -->
+    <div class="product_card_single" data-aos="fade-up" data-aos-duration="1000">
+      <img src="images/Products/fabrics/fabric_1.webp" alt="Cotton Fabrics" />
+      <div class="product_info">
+        <h3>High-twist Cotton Voile</h3>
+        <ul>
+         
+          <li>100% Giza Cotton plain & Jacquard voile</li>
+         
+         
+        </ul>
+      </div>
+    </div>
+
+    <!-- Fine Count Lawns (Separated) -->
+    <div class="product_card_single" data-aos="fade-up" data-aos-duration="1000">
+      <img src="http://localhost/sample/images/Products/fabrics/fabric_2.webp" alt="Fine Count Lawns" />
+      <div class="product_info">
+
+        <h3 >Fine Cotton Lawns</h3>
+     
+        <ul>
+          <li>100s Lawn</li>
+          <li>80s Lawn</li>
+          <li>70s X 100s Lawn</li>
+          <li>60s Cambric</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="product_card_single" data-aos="fade-up" data-aos-duration="1000">
+      <img src="images/Products/fabrics/fabric_3.webp" alt="Satins" />
+      <div class="product_info">
+        <h3>Fine Cotton Satins</h3>
+        
+        <ul>
+          <li>80s Satin</li>
+          <li>60s Satin</li>
+ 
+        </ul>
+      </div>
+    </div>
+
+    <div class="product_card_single" data-aos="fade-up" data-aos-duration="1000">
+      <img src="images/Products/fabrics/fabric_4.webp" alt="Poplins & Twills" />
+      <div class="product_info">
+        <h3>Poplins & Twills</h3>
+     
+        <ul>
+          <li>2/100s to 2/140s Superfine Supima Cotton Poplin</li>
+          <li>60s Poplin </li>
+          <li>50s Poplin</li>
+          <li>50s Twill </li>
+        </ul>
+      </div>
+    </div>
+
+        <!-- Linen -->
+    <div class="product_card_single" data-aos="fade-up" data-aos-duration="1000">
+      <img src="images/Products/fabrics/fabric_5.webp" alt="Linen Fabrics" />
+      <div class="product_info">
+        <h3>Linen</h3>
+        <ul>
+          <li>Superfine Linen</li>
+          <li>Fine Linen</li>
+           <li>Bottom wear Linen</li>
+       
+        </ul>
+      </div>
+    </div>
+      <!-- Cotton Elastane -->
+    <div class="product_card_single" data-aos="fade-up" data-aos-duration="1000">
+      <img src="images/Products/fabrics/fabric_6.webp" alt="Cotton Elastane" />
+      <div class="product_info">
+        <h3>Cotton Elastane Blends</h3>
+        <ul>
+          <li>Poplin Lycra</li>
+          <li>Satin Lycra</li>
+        </ul>
+      </div>
+    </div>
+
+
+
+      <!--Silks-->
+      <div class="product_card_single" data-aos="fade-up" data-aos-duration="1000">
+      <img src="images/Products/fabrics/fabric_7.webp" alt="Silks" />
+      <div class="product_info">
+        <h3>Silks</h3>
+        <ul>
+          <li>Silk Satin</li>
+          <li>Silk Plain & Jacquard</li>
+          <li>Silk Georgette</li>
+          <li>Silk Dechine Crepe</li>
+          <li>Silk Twill</li>
+          <li>Silk Chiffon</li>
+          <li>Silk Linen Blend</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Viscose -->
+    <div class="product_card_single" data-aos="fade-up" data-aos-duration="1000">
+      <img src="http://localhost/sample/images/Products/fabrics/fabric_8.webp" alt="Rayon" />
+      <div class="product_info">
+        <h3>Rayon</h3>
+        <ul>
+          <li>Modal </li>
+          <li>Tencel</li>
+          <li>Lyocell</li>
+          <li>Viscose</li>
+
+        </ul>
+      </div>
+    </div>
+
+    <div class="product_card_single" data-aos="fade-up" data-aos-duration="1000">
+      <img src="images/Products/fabrics/fabric_9.webp" alt="Twills and Drills" />
+      <div class="product_info">
+        <h3>Twills & Drills</h3>
+          
+        <ul>
+          <li>Twill weave</li>
+          <li>Heavy Twill weave</li>
+          <li>Drill weave</li>
+          
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!--Traditional Wear Section-->
+
+<section id="Trad">
+<section class="hidden"><div class="rest_head" data-aos="fade-left" data-aos-duration="1000">Traditional Wear</div></section>
+  <div class="color-strip1"></div>
+
+ <section class="product-grid-section-trad">
+
+  <div class="product_grid-trad">
+    
+    <!-- Cotton Fabrics -->
+    <div class="product_card_single" data-aos="fade-up" data-aos-duration="1000">
+      <img src="images/Products/trad/trad_1.webp" alt="Guthra(Arabic Headgear)" />
+      <div class="product_info">
+        <h3>Guthra (Arabic Headgear)</h3>
+        <ul>
+          <li>100% Giza cotton Leno & fancy Selvedge Guthra Voile</li>
+         
+         
+        </ul>
+      </div>
+    </div>
+
+    <!-- Fine Count Lawns (Separated) -->
+    <div class="product_card_single" data-aos="fade-up" data-aos-duration="1000">
+      <img src="images/Products/trad/trad_2.webp" alt="Emma(African Headgear)" />
+      <div class="product_info">
+
+        <h3>Emma (African Headgear)</h3>
+     
+        <ul>
+          <li>100% Giza Cotton fancy Selvedge Emma Voile</li>
+          
+        </ul>
+      </div>
+    </div>
+
+    <div class="product_card_single" data-aos="fade-up" data-aos-duration="1000">
+      <img src="images/Products/trad/trad_3.webp" alt="Thobe" />
+      <div class="product_info">
+        <h3>Thobe</h3>
+        
+        <ul>
+          <li>100% Pima cotton Superfine fabric</li>
+          <li>100% cotton fabrics</li>
+           <li>Polyester cotton fabrics</li>
+ 
+        </ul>
+      </div>
+    </div>
+
+    <div class="product_card_single" data-aos="fade-up" data-aos-duration="1000">
+      <img src="images/Products/trad/trad_4.webp" alt="Fancy Fabrics" />
+      <div class="product_info">
+        <h3>Fancy Fabrics</h3>
+        
+        <ul>
+          <li>Jacquards</li>
+          <li>Butta Voile</li>
+          <li>Dobby</li>
+ 
+        </ul>
+      </div>
+    </div>
+
+
+
+</section>
+
+<section id="ApparelRange">
+
+
+  <section class="ApparelRange">
+  <div class="pro_box_img">
+  <img src="images/Products/apparel_bg.webp" alt="ApparelRange" loading="lazy">
+ <section class="hidden"> <div class="overlay-text">Apparel Range</div></section>
+</div>
+<div class="apparel-section">
+<section class="hidden"><h2 class="apparel-heading"  data-aos="fade-up" data-aos-duration="1000">Womenswear</h2></section>
+</div>
+<div class="color-strip1"></div>
+
+  <div class="category-row" data-aos="fade-up" data-aos-duration="1000">
+      <!-- Tops -->
+      <div class="col-md-3 d-flex justify-content-center align-items-center">
+        <div class="apparel-category">
+          <div class="category-card"  data-aos="fade-up" data-aos-duration="1000">
+          <h5 class="category-title">Tops</h5>
+          <div id="topsCarousel" class="carousel slide"  data-bs-wrap="true">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="images/Products/TOPS/top1.jpg" class="d-block w-100" alt="Top 1" />
+              </div>
+              <div class="carousel-item">
+                <img src="images/Products/TOPS/top2.jpg" class="d-block w-100" alt="Top 2" />
+              </div>
+
+              <div class="carousel-item">
+                <img src="images/Products/TOPS/top3.jpg" class="d-block w-100" alt="Top 3" />
+              </div>
+
+              <div class="carousel-item">
+                <img src="images/Products/TOPS/top4.jpg" class="d-block w-100" alt="Top 4" />
+              </div>
+
+               <div class="carousel-item">
+                <img src="images/Products/TOPS/top5.jpg" class="d-block w-100" alt="Top 4" />
+              </div>
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#topsCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#topsCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+
+
+              
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+
+      <!-- Shirts -->
+      <div class="col-md-3 d-flex justify-content-center align-items-center">
+        <div class="apparel-category">
+          <div class="category-card"  data-aos="fade-up" data-aos-duration="1000">
+          <h5 class="category-title">Shirts</h5>
+          <div id="shirtsCarousel" class="carousel slide"   data-bs-wrap="true"
+        data-bs-pause="false">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="images/Products/Shirts_women/shirt1.jpg" class="d-block w-100" alt="Shirt 1" />
+              </div>
+              <div class="carousel-item">
+                <img src="images/Products/Shirts_women/shirt2.jpg" class="d-block w-100" alt="Shirt 2" />
+              </div>
+
+              <div class="carousel-item">
+                <img src="images/Products/Shirts_women/shirt3.jpg" class="d-block w-100" alt="Shirt 2" />
+              </div>
+
+              
+
+              <div class="carousel-item">
+                <img src="images/Products/Shirts_women/shirt4.jpg" class="d-block w-100" alt="Shirt 2" />
+              </div>
+          
+
+            <div class="carousel-item">
+                <img src="images/Products/Shirts_women/shirt5.jpg" class="d-block w-100" alt="Shirt 2" />
+              </div>
+
+              <div class="carousel-item">
+                <img src="images/Products/Shirts_women/shirt6.jpg" class="d-block w-100" alt="Shirt 2" />
+              </div>
+
+                        <button class="carousel-control-prev" type="button" data-bs-target="#shirtsCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#shirtsCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+
+      <!-- Shrugs/Jackets -->
+      <div class="col-md-3 d-flex justify-content-center align-items-center">
+        <div class="apparel-category">
+          <div class="category-card"  data-aos="fade-up" data-aos-duration="1000">
+          <h5 class="category-title">Shrugs / Jackets</h5>
+          <div id="shrugsCarousel" class="carousel slide" data-bs-wrap="true"
+        data-bs-pause="false">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="images/Products/Shrugs_Jackets/shrug1.jpg" class="d-block w-100" alt="Shrug 1" />
+              </div>
+              <div class="carousel-item">
+                <img src="images/Products/Shrugs_Jackets/shrug2.jpg" class="d-block w-100" alt="Shrug 2" />
+              </div>
+              <div class="carousel-item">
+                <img src="images/Products/Shrugs_Jackets/shrug3.jpg" class="d-block w-100" alt="Shrug 3" />
+              </div>
+              <div class="carousel-item">
+                <img src="images/Products/Shrugs_Jackets/shrug4.jpg" class="d-block w-100" alt="Shrug 4" />
+              </div>
+
+                            <button class="carousel-control-prev" type="button" data-bs-target="#shrugsCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#shrugsCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Bottoms -->
+      <div class="col-md-3 d-flex justify-content-center align-items-center">
+        <div class="apparel-category">
+           <div class="category-card" data-aos="fade-up" data-aos-duration="1000">
+          <h5 class="category-title">Bottoms</h5>
+          <div id="bottomsCarousel" class="carousel slide" data-bs-wrap="true">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="images/Products/bottom_women/bottomW1.jpg" class="d-block w-100" alt="Bottom 1" />
+              </div>
+              <div class="carousel-item">
+                <img src="images/Products/bottom_women/bottomW2.jpg" class="d-block w-100" alt="Bottom 2" />
+              </div>
+              <div class="carousel-item">
+                <img src="images/Products/bottom_women/bottomW3.jpg" class="d-block w-100" alt="Bottom 2" />
+              </div>
+              <div class="carousel-item">
+                <img src="images/Products/bottom_women/bottomW4.jpg" class="d-block w-100" alt="Bottom 2" />
+              </div>
+
+              <div class="carousel-item">
+                <img src="images/Products/bottom_women/bottomW5.jpg" class="d-block w-100" alt="Bottom 2" />
+              </div>
+
+              <div class="carousel-item">
+                <img src="images/Products/bottom_women/bottomW6.jpg" class="d-block w-100" alt="Bottom 2" />
+              </div>
+
+              <div class="carousel-item">
+                <img src="images/Products/bottom_women/bottomW7.jpg" class="d-block w-100" alt="Bottom 2" />
+              </div>
+
+                                     <button class="carousel-control-prev" type="button" data-bs-target="#bottomsCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#bottomsCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+
+            </div>
+          </div>
+        </div>
+      </div>
+         </div>
+          <!-- Dresses -->
+      <div class="col-md-3 d-flex justify-content-center align-items-center">
+        <div class="apparel-category">
+            <div class="category-card" data-aos="fade-up" data-aos-duration="1000">
+          <h5 class="category-title">Dresses</h5>
+          <div id="dressesCarousel" class="carousel slide" data-bs-wrap="true">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="images/Products/DRESSES/dress_new_1.jpg" class="d-block w-100" alt="Dress 1" />
+              </div>
+              <div class="carousel-item">
+                <img src="images/Products/DRESSES/dress_new_2.jpg" class="d-block w-100" alt="Dress 2" />
+              </div>
+              <div class="carousel-item">
+                <img src="images/Products/DRESSES/dress_new_3.jpg" class="d-block w-100" alt="Dress 2" />
+              </div>
+              <div class="carousel-item">
+                <img src="images/Products/DRESSES/dress_new_4.jpg" class="d-block w-100" alt="Dress 2" />
+              </div>
+
+              <div class="carousel-item">
+                <img src="images/Products/DRESSES/dress_new_5.jpg" class="d-block w-100" alt="Dress 2" />
+              </div>
+
+              <div class="carousel-item">
+                <img src="images/Products/DRESSES/dress_new_6.jpg" class="d-block w-100" alt="Dress 2" />
+              </div>
+
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#dressesCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#dressesCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+       <!--Coords-->
+      <div class="col-md-3 d-flex justify-content-center align-items-center">
+        <div class="apparel-category">
+            <div class="category-card" data-aos="fade-up" data-aos-duration="1000">
+          <h5 class="category-title">Co-ords</h5>
+
+          <div id="CoordCarousel" class="carousel slide" data-bs-wrap="true"
+        data-bs-pause="false" >
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="images/Products/CO-ORDS/coord1.jpg" class="d-block w-100" alt="Dress 1" />
+              </div>
+              <div class="carousel-item">
+                <img src="images/Products/CO-ORDS/coord2.jpg" class="d-block w-100" alt="Dress 2" />
+              </div>
+
+              <div class="carousel-item">
+                <img src="images/Products/CO-ORDS/coord3.jpg" class="d-block w-100" alt="Dress 2" />
+              </div>
+
+              <div class="carousel-item">
+                <img src="images/Products/CO-ORDS/coord5.jpg" class="d-block w-100" alt="Dress 2" />
+              </div>
+
+              <div class="carousel-item">
+                <img src="images/Products/CO-ORDS/coord6.jpg" class="d-block w-100" alt="Dress 2" />
+              </div>
+
+             
+
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#CoordCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#CoordCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+            </div>
+          </div>
+       </div>
+     </div>
+  </div>
+
+    <!-- Row 2 -->
+    <div class="row">
+     
+    
+   
+      
+
+     
+     
+    </div>
+    <!--Kaftans-->
+    <div class="col-md-3 d-flex justify-content-center align-items-center">
+        <div class="apparel-category">
+            <div class="category-card" data-aos="fade-up" data-aos-duration="1000">
+          <h5 class="category-title">Kaftans</h5>
+
+          <div id="kaftanCarousel" class="carousel slide"data-bs-wrap="true"
+        data-bs-pause="false">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="images/Products/KAFTANS/kaftan1.jpg" class="d-block w-100" alt="Dress 1" />
+              </div>
+
+              <div class="carousel-item">
+                <img src="images/Products/KAFTANS/kaftan2.jpg" class="d-block w-100" alt="Dress 1" />
+              </div>
+
+              <div class="carousel-item">
+                <img src="images/Products/KAFTANS/kaftan3.jpg" class="d-block w-100" alt="Dress 1" />
+              </div>
+
+               <div class="carousel-item">
+                <img src="images/Products/KAFTANS/kaftan4.jpg" class="d-block w-100" alt="Dress 1" />
+              </div>
+
+              <div class="carousel-item">
+                <img src="images/Products/KAFTANS/kaftan5.jpg" class="d-block w-100" alt="Dress 1" />
+              </div>
+
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#kaftanCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#kaftanCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div><!--end of womenswear-->
+
+
+
+<div class="apparel-section">
+<section class="hidden"><h2 class="apparel-heading"  data-aos="fade-up" data-aos-duration="1000">Menswear</h2></section>
+</div>
+<div class="color-strip1"></div>
+  <div class="category-row"data-aos="fade-up" data-aos-duration="1000">
+      <!-- Tops -->
+      <div class="col-md-3 d-flex justify-content-center align-items-center">
+        <div class="apparel-category">
+          <div class="category-card">
+          <h5 class="category-title">Shirts</h5>
+          <div id="menShirtCarousel" class="carousel slide" data-bs-wrap="true">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="images\Products\Shirts_men\shirt1.jpg" class="d-block w-100" alt="Top 1" />
+              </div>
+              <div class="carousel-item">
+                <img src="images\Products\Shirts_men\shirt2.jpg" class="d-block w-100" alt="Top 2" />
+              </div>
+
+              <div class="carousel-item">
+                <img src="images/Products/Shirts_men/shirt3.jpg" class="d-block w-100" alt="Top 2" />
+              </div>
+
+              <div class="carousel-item">
+                <img src="images/Products/Shirts_men/shirt4.jpg" class="d-block w-100" alt="Top 2" />
+              </div>
+
+              <div class="carousel-item">
+                <img src="images/Products/Shirts_men/shirt5.jpg" class="d-block w-100" alt="Top 2" />
+              </div>
+
+              <div class="carousel-item">
+                <img src="images/Products/Shirts_men/shirt6.jpg" class="d-block w-100" alt="Top 2" />
+              </div>
+
+                         <button class="carousel-control-prev" type="button" data-bs-target="#menShirtCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#menShirtCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+            </div>
+          </div>
+           
+        </div>
+      </div>
+    </div>
+   
+
+
+
+        <div class="col-md-3 d-flex justify-content-center align-items-center">
+        <div class="apparel-category">
+          <div class="category-card">
+          <h5 class="category-title">Jackets</h5>
+          <div id="JacCarousel" class="carousel slide"  data-bs-wrap="true"
+        data-bs-pause="true">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="images\Products\jackets_m\JM1.jpg" class="d-block w-100" alt="Jacket 1" />
+              </div>
+
+              <div class="carousel-item">
+                <img src="images\Products\jackets_m\JM2.jpg" class="d-block w-100" alt="Jacket 2" />
+              </div>
+
+              <div class="carousel-item">
+                <img src="images\Products\jackets_m\JM3.jpg" class="d-block w-100" alt="Jacket 3" />
+              </div>
+
+               <div class="carousel-item">
+                <img src="images\Products\jackets_m\JM4.jpg" class="d-block w-100" alt="Jacket 4" />
+              </div>
+
+               <div class="carousel-item">
+                <img src="images\Products\jackets_m\JM5.jpg" class="d-block w-100" alt="Jacket 5" />
+              </div>
+
+               <div class="carousel-item">
+                <img src="images\Products\jackets_m\JM6.jpeg" class="d-block w-100" alt="Jacket 6" />
+              </div>
+
+
+
+
+                         <button class="carousel-control-prev" type="button" data-bs-target="#JacCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#JacCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+
+
+     </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+       <!--men bottoms-->
+    <div class="col-md-3 d-flex justify-content-center align-items-center">
+        <div class="apparel-category">
+          <div class="category-card">
+          <h5 class="category-title">Bottoms</h5>
+          <div id="BotCarousel" class="carousel slide"data-bs-wrap="true"
+        data-bs-pause="true">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="images\Products\bottoms_men\bottomM1.jpg" class="d-block w-100" alt="Jacket 1" />
+              </div>
+
+              <div class="carousel-item">
+                <img src="images\Products\bottoms_men\bottomM2.jpg" class="d-block w-100" alt="Jacket 2" />
+              </div>
+
+              <div class="carousel-item">
+                <img src="images\Products\bottoms_men\bottomM3.jpg" class="d-block w-100" alt="Jacket 3" />
+              </div>
+
+               <div class="carousel-item">
+                <img src="images\Products\bottoms_men\bottomM4.jpg" class="d-block w-100" alt="Jacket 4" />
+              </div>
+
+               <div class="carousel-item">
+                <img src="images\Products\bottoms_men\bottomM5.jpg" class="d-block w-100" alt="Jacket 5" />
+              </div>
+
+               <div class="carousel-item">
+                <img src="images\Products\bottoms_men\bottomM6.jpg" class="d-block w-100" alt="Jacket 6" />
+              </div>
+
+
+
+                         <button class="carousel-control-prev" type="button" data-bs-target="#BotCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#BotCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+
+
+     </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+  </div> <!--end of row1-->
+
+<div class="apparel-section">
+  <h2 class="apparel-heading"  data-aos="fade-right" data-aos-duration="1000">Value Addition</h2>
+</div>
+<div class="color-strip1"></div>
+<div class="value-cards-container">
+  <div class="scroller">
+    <div class="value-card">
+      <img src="images/Products/value_addition/value_1.webp" alt="Card 1">
+      <h5 class="category-title">Applique</h5>
+    </div>
+    <div class="value-card">
+      <img src="images/Products/value_addition/value_2.webp" alt="Card 2">
+       <h5 class="category-title">Embroidery</h5>
+    </div>
+
+     <div class="value-card">
+      <img src="images/Products/value_addition/value_3.webp" alt="Card 2">
+       <h5 class="category-title">Smocking</h5>
+    </div>
+
+     <div class="value-card">
+      <img src="images/Products/value_addition/value_4.webp" alt="Card 2">
+       <h5 class="category-title">Hand Paint</h5>
+    </div>
+
+     <div class="value-card">
+      <img src="images/Products/value_addition/value_5.webp" alt="Card 2">
+       <h5 class="category-title">Placement Print</h5>
+    </div>
+
+     <div class="value-card">
+      <img src="images/Products/value_addition/value_6.webp" alt="Card 2">
+       <h5 class="category-title">Foil Print</h5>
+    </div>
+
+    
+  
+  </div>
+</div>
+</div>
+
+<div class="scroll-hint">Swipe to see more →</div>
+
+</section>
+</section>
+
+ 
+<div class="color-strip_footer"></div>
+<footer class="footer">
+  <div class="footer-container">
+  <img src="images/footer/A.jpg">
+  </div>
+</footer>
+    
+   <script>
+document.addEventListener("DOMContentLoaded", () => {
+ ///about us image///////
+   function revealOnScroll() {
+    const steps = document.querySelectorAll('.pro_box_img');
+    const windowHeight = window.innerHeight;
+
+    steps.forEach((step, index) => {
+      const rect = step.getBoundingClientRect();
+      if (rect.top < windowHeight - 100) {  // Adjust trigger point if needed
+        step.classList.add('visible');
+      }
+    });
+  }
+
+  window.addEventListener('scroll', revealOnScroll);
+  window.addEventListener('load', revealOnScroll);   
+
+});
+
+
+document.addEventListener("DOMContentLoaded", () => {
+ ///about us image///////
+   function revealOnScroll() {
+    const steps = document.querySelectorAll('.about_box_img');
+    const windowHeight = window.innerHeight;
+
+    steps.forEach((step, index) => {
+      const rect = step.getBoundingClientRect();
+      if (rect.top < windowHeight - 100) {  // Adjust trigger point if needed
+        step.classList.add('visible');
+      }
+    });
+  }
+
+  window.addEventListener('scroll', revealOnScroll);
+  window.addEventListener('load', revealOnScroll);   
+
+});
+
+
+
+
+
+</script>
+
+ 
+  </div>
+<script src='animation.js'></script>
+<!-- AOS JS -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+<!-- Bootstrap JS (required for carousel) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+
+
+</html>
+
+
+
+
+ 
+ 
+
