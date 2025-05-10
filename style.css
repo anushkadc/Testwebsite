@@ -500,6 +500,14 @@ header {
 }
 
 
+@media (max-width: 768px) {
+  .hidden {
+    opacity: 1 ;
+  }
+}
+
+
+
 
 
 
