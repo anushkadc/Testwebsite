@@ -161,17 +161,6 @@ cards.forEach(card => observer.observe(card));
     const progress = scrollTop / scrollHeight;
     strip.style.transform = `scaleX(${progress})`;
   });
-////////////for all hidden classses/////////
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('show');
-      }
-    });
-  });
-
-  document.querySelectorAll('.hidden').forEach(el => observer.observe(el));
 
 
 
