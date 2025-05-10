@@ -345,6 +345,24 @@ header {
   color: #183b4e;
 }
 
+  /*Strip just below the navbar*/
+.color-strip {
+  display: flex;
+  height: 10px;
+  width: 100%;
+  position: fixed;
+  top:100px;
+  z-index: 800;
+  background: linear-gradient(to right, #E52020, #FBA518,#7E1891,#A6F1E0);
+  scale: 0 1;
+  transform-origin:left ;
+  animation: scroll-watcher linear;
+  animation-timeline: scroll();
+  box-sizing: border-box;
+
+}
+
+
 
 }
 
