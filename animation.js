@@ -151,6 +151,30 @@ cards.forEach(card => observer.observe(card));
 });
 
 
+///////////color strio//////////
+
+  const strip = document.querySelector(".color-strip");
+
+  window.addEventListener("scroll", () => {
+    const scrollTop = window.scrollY;
+    const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const progress = scrollTop / scrollHeight;
+    strip.style.transform = `scaleX(${progress})`;
+  });
+////////////for all hidden classses/////////
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+      }
+    });
+  });
+
+  document.querySelectorAll('.hidden').forEach(el => observer.observe(el));
+
+
+
 
 
 
