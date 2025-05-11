@@ -20,89 +20,103 @@
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
 <style>
-  body{
-    margin-top: 100px;
+ /* Ensure the base HTML and body support scrolling */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100%;
+  overflow-x: hidden;
+}
+
+/* Your original margin-top for spacing */
+body {
+  margin-top: 100px;
+}
+
+/* Title section */
+.Design_head {
+  text-align: center;
+  color: #183B4E;
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin: 3rem 0 1rem;
+}
+
+/* Video titles */
+.video-title {
+  color: #183B4E;
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.video-title.left,
+.video-title.right {
+  text-align: center;
+}
+
+/* Wrapper for video sections */
+.video-stack-wrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 2rem;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+
+/* Video container */
+.video-container {
+  flex: 1 1 45%;
+  padding: 1rem;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+
+/* Responsive video */
+.video-container video {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  display: block;
+}
+
+/* Description block */
+.studio-description {
+  max-width: 90%;
+  margin: 2rem auto;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: white;
+  background-color: #183b4e;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  box-sizing: border-box;
+}
+
+/* Media query for mobile */
+@media (max-width: 768px) {
+  .video-stack-wrapper {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
   }
 
-    .Design_head {
-      text-align: center;
-      color: #183B4E;
-      font-size: 2.8rem;
-      font-weight: 700;
-      margin: 3rem 0 1rem;
-    }
+  .video-title.left,
+  .video-title.right {
+    text-align: center;
+  }
 
-    .video-title {
-      color: #183B4E;
-      font-size: 2.2rem;
-      font-weight: 700;
-      margin-bottom: 1rem;
-    }
-
-    .video-title.left {
-      text-align: center;
-    }
-
-    .video-title.right {
-      text-align: center;
-    }
-
-    .video-stack-wrapper {
-      display: flex;
-      align-items: flex-start;
-      justify-content: space-between;
-      gap: 2rem;
-      padding: 2rem;
-      flex-wrap: wrap;
-    }
-
-    .video-container {
-      flex: 1 1 45%;
-      padding: 1rem;
-      background-color: #f9f9f9;
-      border-radius: 10px;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    }
-
-    .video-container video {
-      width: 100%;
-      height: auto;
-      border-radius: 8px;
-    }
-
-    .studio-description {
-      max-width: 90%;
-      margin: 2rem auto;
-      font-size: 1.1rem;
-      line-height: 1.6;
-      color:white;
-      background-color: #183b4e;
-      padding: 1.5rem;
-      border-radius: 10px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-    }
-
-
-  
-
-    @media (max-width: 768px) {
-      .video-stack-wrapper {
-        flex-direction: column;
-        align-items: center;
-        gap: 2rem;
-      }
-
-      .video-title.left,
-      .video-title.right {
-        text-align: center;
-      }
-
-      .video-container {
-        flex: 1 1 100%;
-        max-width: 100%;
-      }
-    }
-
+  .video-container {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}
 
 
 
@@ -112,7 +126,7 @@
  <header>
    
     <div class="logo">
-          <a href="index.html"><img src="logoSPID.png"></a>
+          <a href="index.html"><img src="images\logoSPID.png"></a>
         </div>
  <div class="nav_box">
    <button class="hamburger" onclick="toggleMenu()">☰</button>
@@ -199,7 +213,7 @@
 <div class="color-strip_footer"></div>
 <footer class="footer">
   <div class="footer-container">
-  <img src="A.jpg">
+  <img src="images/footer/A.jpg">
   </div>
 </footer>
 </footer>
