@@ -121,6 +121,22 @@ video.fullscreen-blur::before {
       }
     }
 
+
+      #blur-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  background: rgba(255, 255, 255, 0.1); /* Frosted glass */
+  z-index: 9998;
+  display: none;
+   pointer-events: none; /* Prevents it from blocking scroll/touch */
+}
+
+
 </style>
 </head>
 <body>
@@ -167,6 +183,8 @@ video.fullscreen-blur::before {
 </div>
 
 <div class="color-strip"></div>
+   <div id="blur-overlay"></div>
+  
   
    <div class="video-stack-wrapper">
       <!-- Design Studio -->
