@@ -26,10 +26,10 @@ html, body {
   padding: 0;
   width: 100%;
   min-height: 100%;
+  height: auto; /* ADD THIS */
   overflow-x: hidden;
-
-  
 }
+
 
 /* Your original margin-top for spacing */
 body {
@@ -119,6 +119,11 @@ body {
     max-width: 100%;
   }
 }
+video {
+  max-height: 100%;
+  max-width: 100%;
+}
+
 
 
 
@@ -128,7 +133,7 @@ body {
  <header>
    
     <div class="logo">
-          <a href="index.html"><img src="logoSPID.png"></a>
+          <a href="index.html"><img src="images\logoSPID.png"></a>
         </div>
  <div class="nav_box">
    <button class="hamburger" onclick="toggleMenu()">☰</button>
@@ -165,7 +170,7 @@ body {
       
     </nav>
   </header>
-</div>
+
 
 <div class="color-strip"></div>
 
@@ -215,7 +220,7 @@ body {
 <div class="color-strip_footer"></div>
 <footer class="footer">
   <div class="footer-container">
-  <img src="A.jpg">
+  <img src="images/footer/A.jpg">
   </div>
 </footer>
 
