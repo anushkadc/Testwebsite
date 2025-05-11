@@ -385,24 +385,21 @@ header {
   
 }
 
-.footer-container {
-  line-height: 0; /* Prevent line gaps */
-  padding: 0;
-  margin: 0;
-  overflow: hidden; /* Hide any overflow from image scaling */
-  height:auto;
+  .footer {
+  width: 100%;
+  background-color: #f8f8f8;
+
+  position: relative; /* Make sure it's not fixed */
+  z-index: 1;
+  box-sizing: border-box;
 }
 
-.footer-container img {
- 
+  .footer-container img {
   width: 100%;
-  height: auto; /* Allow responsive scaling */ /* Cap height without distorting */
-  object-fit: contain;
-  opacity: 0.8;
-  margin: 0;
-  padding: 0;
-  margin-bottom: 0;
+  height: auto;
+  display: block;
 }
+
 
 
 /*All Animations*/
