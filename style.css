@@ -47,11 +47,6 @@ main {
  }
 
 
-.watermark-container{
-  background-image: url("C:\xampp\htdocs\sample\4SPID.jpeg");
-}
-
-
 .logo img {
   width: 250px;
   height: auto;
@@ -291,25 +286,20 @@ header {
 }
 
 .dropdown-label {
-  padding: 0.6rem 0;
-  text-align: center;
-  width: 100%;
-}
-.dropdown-label {
   display: block;
   width: 100%;
   text-align: center;
-  padding: 0.75rem 1rem;
+  padding: 0.75rem 1rem; /* Use one consistent padding */
   cursor: pointer;
   user-select: none;
+  margin: 0; /* Remove extra spacing */
 }
+
 .dropdown-label:hover,
 .dropdown-label:focus {
   background-color: rgba(255, 255, 255, 0.1);
   color: #ffffff;
 }
-
-
 
 /* Dropdown Content */
 .dropdown-content {
@@ -320,15 +310,19 @@ header {
   width: 100%;
   background-color: #f6f8fa;
   border-top: 1px solid #ccc;
-  padding: 1rem 0;
+  padding: 0; /* No padding by default */
   overflow: hidden;
   max-height: 0;
-  transition: max-height 0.3s ease-in-out;
+  transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out;
+  z-index: 1002;
+  position: relative;
 }
 
 .dropdown.open .dropdown-content {
   max-height: 500px;
+  padding: 1rem 0; /* Add padding only when open */
 }
+
 
 .dropdown-content a {
   padding: 0.75rem 0;
@@ -348,6 +342,16 @@ header {
 
 
 
+}
+
+/* footer strip*/
+.color-strip_footer {
+  display: flex;
+  height: 10px;
+  width: 100%;
+ background: linear-gradient(to right, #E52020, #FBA518, #7E1891,#A6F1E0);
+ margin-top: 20px;
+
 
 }
   /*Strip just below the navbar*/
@@ -364,18 +368,6 @@ header {
   transition: transform 0.1s linear;
 }
 
-
-/* footer strip*/
-.color-strip_footer {
-  display: flex;
-  height: 10px;
-  width: 100%;
- background: linear-gradient(to right, #E52020, #FBA518, #7E1891,#A6F1E0);
- margin-top: 20px;
-
-
-}
- 
 
 
   
