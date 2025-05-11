@@ -2,8 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
- <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>SPID4</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,132 +13,63 @@
 <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
 
-
 <style>
- /* Ensure the base HTML and body support scrolling */
-html, body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  min-height: 100%;
-  height: auto; /* ADD THIS */
-  overflow-x: hidden;
-}
+ body {
+      margin: 0;
+      margin-top: 100px;
+
+    }
 
 
-/* Your original margin-top for spacing */
-body {
-  margin-top: 100px;
-}
+    .studio-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding: 2rem;
+      gap: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
 
-/* Title section */
-.Design_head {
-  text-align: center;
-  color: #183B4E;
-  font-size: 2.8rem;
-  font-weight: 700;
-  margin: 3rem 0 1rem;
-}
+    .studio-box {
+      flex: 1;
+      min-width: 300px;
+    }
 
-/* Video titles */
-.video-title {
-  color: #183B4E;
-  font-size: 2.2rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-}
+    .studio-heading {
+      text-align: center;
+      color: #183B4E;
+      font-size: 2.8rem;
+      font-weight: bold;
+      margin: 3rem 0 1rem;
+    }
 
-.video-title.left,
-.video-title.right {
-  text-align: center;
-}
+    .studio-video {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
 
-/* Wrapper for video sections */
-.video-stack-wrapper {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 2rem;
-  padding: 2rem;
-  flex-wrap: wrap;
-  box-sizing: border-box;
-}
+    .common-text {
+      text-align: center;
+      font-size: 1.2rem;
+      color: #333;
+      margin: 2rem auto;
+      max-width: 800px;
+      padding: 0 1rem;
+    }
 
-/* Video container */
-.video-container {
-  flex: 1 1 45%;
-  padding: 1rem;
-  background-color: #f9f9f9;
-  border-radius: 10px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  box-sizing: border-box;
-}
+    @media (max-width: 768px) {
+      .studio-container {
+        flex-direction: column;
+        align-items: center;
+      }
 
-/* Responsive video */
-.video-container video {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  display: block;
-}
-
-/* Description block */
-.studio-description {
-  max-width: 90%;
-  margin: 2rem auto;
-  font-size: 1.1rem;
-  line-height: 1.6;
-  color: white;
-  background-color: #183b4e;
-  padding: 1.5rem;
-  border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-  box-sizing: border-box;
-}
-
-/* Media query for mobile */
-@media (max-width: 768px) {
-  .video-stack-wrapper {
-    flex-direction: column;
-    align-items: center;
-    gap: 2rem;
-  }
-
-  .video-title.left,
-  .video-title.right {
-    text-align: center;
-  }
-
-  .video-container {
-    flex: 1 1 100%;
-    max-width: 100%;
-  }
-}
-video {
-  max-height: 100%;
-  max-width: 100%;
-}
-
-  .footer {
-  width: 100%;
-  background-color: #f8f8f8;
-  
-  position: relative; /* Make sure it's not fixed */
-  z-index: 1;
-  box-sizing: border-box;
-}
-.footer-container img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-
-
-
-
-
-
+      .studio-box {
+        width: 100%;
+      }
+    }
 </style>
 </head>
 <body>
@@ -188,47 +118,35 @@ video {
 <div class="color-strip"></div>
 
   
-   <div class="video-stack-wrapper">
-      <!-- Design Studio -->
-
-
-      <div class="video-container" data-aos="fade-right" data-aos-duration="1000">
-        <h3 class="video-title left" data-aos="fade-right" data-aos-duration="1000">Design Studio</h3>
-        <div class="color-strip1"></div>
-        <div>&nbsp;</div>
-        <video controls>
-          <source src="videos/Studio/design_studio.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-      </div>
-
-      <!-- Apparel Studio -->
-      <div class="video-container" data-aos="fade-left" data-aos-duration="1000">
-        <h3 class="video-title right" data-aos="fade-left" data-aos-duration="1000">Apparel Studio</h3>
-        <div class="color-strip1"></div>
-        <div>&nbsp;</div>
-        <video controls>
-          <source src="videos\Studio\apparel_video.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-      </div>
+   
+  <div class="studio-container">
+    <div class="studio-box">
+      <div class="studio-heading"  data-aos="fade-left" data-aos-duration="1000">Design Studio</div>
+      <div class="color-strip1"></div>
+      <div>&nbsp;</div>
+      <video class="studio-video" controls>
+        <source src="videos\Studio\design_studio.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
     </div>
 
-    <div class="studio-description" data-aos="fade-up" data-aos-duration="1000">
-      <p >
-        At the heart of our brand is a deep commitment to storytelling through prints and garment designs.
-        The journey of transforming an idea into a creative print or a tangible garment is dynamic.
-        Each design is thoughtfully crafted, blending imagination with technical precision.
-      </p>
-      <p>
-        Prints are central to our brand language. We sketch, refine and digitalize motifs, experimenting with patterns and colourways.
-        Simultaneously, we design garments with overall concept. Technical drawings, pattern development and sourcing are handled to ensure both form and function.
-      </p>
-      <p>
-        Our collections are presented through curated lookbooks that reflect the essence of the process — from idea, to sketch, to creation.
-      </p>
+    <div class="studio-box">
+      <div class="studio-heading"  data-aos="fade-right" data-aos-duration="1000">Apparel Studio</div>
+      <div class="color-strip1"></div>
+      <div>&nbsp;</div>
+      <video class="studio-video" controls>
+        <source src="videos\Studio\apparel_video.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
     </div>
+  </div>
 
+  <div class="common-text">At the heart of our brand is a deep commitment to storytelling through prints and garment designs. 
+The journey of transforming an idea into a creative print or a tangible garment is dynamic. 
+Each design is thoughtfully crafted, blending imagination with technical precision.
+Prints are central to our brand language. We sketch, refine and digitalize motifs, experimenting with patterns and colourways.
+Simultaneously, we design garments with overall concept. Technical drawings, pattern development and sourcing are handled to ensure both form and function.
+Our collections are presented through curated lookbooks that reflect the essence of the process- from idea, to sketch, to creation.</div>
 
 <div class="color-strip_footer"></div>
 <footer class="footer">
@@ -249,4 +167,5 @@ video {
 </script>
 </body>
 </html>
+
 
