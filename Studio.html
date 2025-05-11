@@ -82,24 +82,6 @@
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
     }
 
-    video:fullscreen::backdrop {
-  background-color: transparent;
-  opacity: 0.3;
-}
-
-video.fullscreen-blur::before {
-  content: '';
-  position: relative;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: 0;
-  filter: blur(60px) brightness(0.6);
-  background-size: cover;
-  background-position: center;
-  opacity: 0.3;
-}
 
   
 
@@ -122,19 +104,6 @@ video.fullscreen-blur::before {
     }
 
 
-      #blur-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  backdrop-filter: blur(25px);
-  -webkit-backdrop-filter: blur(25px);
-  background: rgba(255, 255, 255, 0.1); /* Frosted glass */
-  z-index: 9998;
-  display: none;
-   pointer-events: none; /* Prevents it from blocking scroll/touch */
-}
 
 
 </style>
@@ -143,7 +112,7 @@ video.fullscreen-blur::before {
  <header>
    
     <div class="logo">
-          <a href="index.html"><img src="logoSPID.png"></a>
+          <a href="index.html"><img src="images\logoSPID.png"></a>
         </div>
  <div class="nav_box">
    <button class="hamburger" onclick="toggleMenu()">☰</button>
@@ -172,7 +141,7 @@ video.fullscreen-blur::before {
   </div>
 </div>
 
-      <a href="manufacturing.html">Manufacturing</a>
+      <a href="Manufacturing.html">Manufacturing</a>
        <a href="Studio.html">Studio</a>
       <a href="markets.html">Global Reach</a>
       <a href="Events.html">Events</a>
@@ -183,11 +152,12 @@ video.fullscreen-blur::before {
 </div>
 
 <div class="color-strip"></div>
-   <div id="blur-overlay"></div>
-  
+
   
    <div class="video-stack-wrapper">
       <!-- Design Studio -->
+
+
       <div class="video-container" data-aos="fade-right" data-aos-duration="1000">
         <h3 class="video-title left" data-aos="fade-right" data-aos-duration="1000">Design Studio</h3>
         <div class="color-strip1"></div>
@@ -229,39 +199,11 @@ video.fullscreen-blur::before {
 <div class="color-strip_footer"></div>
 <footer class="footer">
   <div class="footer-container">
-  <img src="A.jpg">
+  <img src="images/footer/A.jpg">
   </div>
 </footer>
 </footer>
-<script>
-  const video = document.getElementById('myVideo');
 
-document.addEventListener('fullscreenchange', () => {
-  if (document.fullscreenElement === video) {
-    video.classList.add('fullscreen-blur');
-
-    // Use the current frame of the video as the background
-    const canvas = document.createElement('canvas');
-    canvas.width = video.videoWidth;
-    canvas.height = video.videoHeight;
-    const ctx = canvas.getContext('2d');
-    ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
-    const frameData = canvas.toDataURL();
-
-    // Set background image to the frame
-    video.style.setProperty('--video-blur', url(${frameData}));
-    document.documentElement.style.setProperty('--video-blur', url(${frameData}));
-
-    // Override the pseudo-element background
-    video.style.setProperty('background-image', url(${frameData}));
-    video.style.setProperty('background-size', cover);
-    video.style.setProperty('background-position', center);
-  } else {
-    video.classList.remove('fullscreen-blur');
-    video.style.removeProperty('background-image');
-  }
-});
-</script>
 
 <script src='animation.js'></script>
 
