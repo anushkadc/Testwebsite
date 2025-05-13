@@ -164,6 +164,56 @@ cards.forEach(card => observer.observe(card));
 
 
 
+//////////highlighting navlinks/////////
+  const navLinks = document.querySelectorAll('.navbar > a'); // top-level nav links
+const dropdowns = document.querySelectorAll('.dropdown');
+
+const currentPath = window.location.pathname;
+
+navLinks.forEach(link => {
+  const linkPath = new URL(link.href).pathname;
+
+  if (currentPath.endsWith(linkPath)) {
+    link.classList.add('active');
+  }
+});
+
+// Check dropdowns
+dropdowns.forEach(dropdown => {
+  const dropdownLinks = dropdown.querySelectorAll('a');
+  dropdownLinks.forEach(link => {
+    const linkPath = new URL(link.href).pathname;
+    
+    // If dropdown link's path matches current path, activate parent label
+    if (currentPath.endsWith(linkPath)) {
+      const label = dropdown.querySelector('.dropdown-label');
+      if (label) {
+        label.classList.add('active');
+      }
+    }
+  });
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
