@@ -20,6 +20,12 @@
   <!-- AOS CSS -->
 <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
  <link rel="stylesheet" href="style.css" />
+
+   <!-- Swiper CSS -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+  />
 <style>
   
         html{
@@ -250,29 +256,7 @@
   
 }
 
-.value-card {
-  background: #ffffff;
-  border-radius: 16px;
-  padding: 16px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 
-  width: 360px;
-  text-align: center;
-  flex-shrink: 0; /* Prevent shrinking of cards */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 20px;
-    scroll-snap-align: center;
-}
-
-.value-card img {
-  width: 100%;
-  height: auto;
-  max-height: 380px;
-  object-fit: cover;
-  border-radius: 12px;
-}
 .apparel-section h2 {
   font-size: 2rem;
   margin-bottom: 1rem;
@@ -483,6 +467,95 @@
   50% { opacity: 1; }
   100% { opacity: 0.3; }
 }
+
+   .swiper {
+      width: 100%;
+      max-width: 1200px;
+      margin: auto;
+      padding-bottom: 50px;
+      margin-top: 20px;
+    }
+
+    .swiper-slide {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+  
+    .swiper-button-prev,.swiper-button-next{
+      color:grey;
+    }
+
+
+
+
+
+
+
+    .value-card {
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 360px;
+      text-align: center;
+      flex-shrink: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: transform 0.3s ease;
+    }
+
+    .value-card:hover {
+      transform: scale(1.03);
+    }
+
+    .value-card img {
+      width: 100%;
+      height: auto;
+     max-height: 300px;
+      object-fit: cover;
+     
+    }
+
+    .category-title {
+      font-size: 1.1rem;
+      font-weight: bold;
+    }
+
+    /* Hide arrows on mobile */
+    @media (max-width: 768px) {
+      .swiper-button-next,
+      .swiper-button-prev {
+        display: none;
+      }
+
+      .value-card{
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 300px;
+      text-align: center;
+      flex-shrink: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: transform 0.3s ease;
+
+      }
+
+      .value-card img{
+        width: 100%;
+        height: 380px;
+      }
+
+    }
+
+
 
 
 
@@ -1259,42 +1332,51 @@
   <h2 class="apparel-heading"  data-aos="fade-right" data-aos-duration="1000">Value Addition</h2>
 </div>
 <div class="color-strip1"></div>
-<div class="value-cards-container">
-  <div class="scroller">
-    <div class="value-card">
-      <img src="value_addition/value_1.webp" alt="Card 1">
-      <h5 class="category-title">Applique</h5>
-    </div>
-    <div class="value-card">
-      <img src="value_addition/value_2.webp" alt="Card 2">
-       <h5 class="category-title">Embroidery</h5>
+<!-- Swiper -->
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+
+      <div class="swiper-slide">
+        <div class="value-card">
+          <img src="images/Products/value_addition/value_1.webp" alt="Applique">
+          <h5 class="category-title">Applique</h5>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="value-card">
+          <img src="images/Products/value_addition/value_2.webp" alt="Embroidery">
+          <h5 class="category-title">Embroidery</h5>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="value-card">
+          <img src="images/Products/value_addition/value_4.webp" alt="Hand Paint">
+          <h5 class="category-title">Hand Paint</h5>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="value-card">
+          <img src="images/Products/value_addition/value_5.webp" alt="Placement Print">
+          <h5 class="category-title">Placement Print</h5>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="value-card">
+          <img src="images/Products/value_addition/value_6.webp" alt="Foil Print">
+          <h5 class="category-title">Foil Print</h5>
+        </div>
+      </div>
+
     </div>
 
-     <div class="value-card">
-      <img src="value_addition/value_3.webp" alt="Card 2">
-       <h5 class="category-title">Smocking</h5>
-    </div>
-
-     <div class="value-card">
-      <img src="value_addition/value_4.webp" alt="Card 2">
-       <h5 class="category-title">Hand Paint</h5>
-    </div>
-
-     <div class="value-card">
-      <img src="value_addition/value_5.webp" alt="Card 2">
-       <h5 class="category-title">Placement Print</h5>
-    </div>
-
-     <div class="value-card">
-      <img src="value_addition/value_6.webp" alt="Card 2">
-       <h5 class="category-title">Foil Print</h5>
-    </div>
-
-    
-  
+    <!-- Navigation arrows (desktop only) -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
   </div>
-</div>
-</div>
 
 <div class="scroll-hint">Swipe to see more →</div>
 
@@ -1348,21 +1430,43 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener('load', revealOnScroll);   
 
 });
-
-
-
-
-
 </script>
-
- 
-  </div>
 <script src='animation.js'></script>
 <!-- AOS JS -->
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 <script>
   AOS.init();
 </script>
+
+   <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Init Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      loop: true,
+      spaceBetween: 30,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      breakpoints: {
+        0: {
+          slidesPerView: 1,
+        },
+        640: {
+          slidesPerView: 2,
+        },
+        900: {
+          slidesPerView: 3,
+        },
+        1200: {
+          slidesPerView: 4,
+        }
+      }
+    });
+  </script>
+  
 <!-- Bootstrap JS (required for carousel) -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
