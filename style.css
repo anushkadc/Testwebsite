@@ -404,6 +404,23 @@ header {
   margin-bottom: 0;
 }
 
+.footer-cr{
+  text-align: center;
+  background-color: #183b4e; 
+  color:#adb5bd;
+  padding: 0;
+  margin: 0;
+  height: 15px;
+font-size: 10px;
+}
+
+@media (max-width: 768) {
+  .footer-cr{
+    font-size: 0.55rem;
+  }
+
+}
+
 
 /*All Animations*/
 @keyframes transitionIn{
