@@ -312,41 +312,32 @@ body * {
     }
 
   
-
 .carousel-control-prev,
 .carousel-control-next {
-  background: #183b4e;
+  background: rgba(24, 59, 78, 0.6); /* Faded #183b4e */
   border-radius: 50%;
   width: 60px;
   height: 60px;
   top: 50%;
   transform: translateY(-50%);
   margin: 0;
-  opacity: 0.9;
+  transition: background 0.3s ease;
 }
 
-/* Icon inside the buttons for better visibility */
+/* On hover: full solid color */
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  background: #183b4e;
+}
+
+/* Icon inside the buttons */
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
   background-size: 60% 60%;
 }
 
-/* Medium screens (tablets) */
+/* Medium screens */
 @media (max-width: 768px) {
-  .carousel-control-prev,
-  .carousel-control-next {
-    width: 45px;
-    height: 45px;
-  }
-
-  .carousel-control-prev-icon,
-  .carousel-control-next-icon {
-    background-size: 55% 55%;
-  }
-}
-
-/* Small screens (mobiles) */
-@media (max-width: 480px) {
   .carousel-control-prev,
   .carousel-control-next {
     width: 35px;
@@ -355,7 +346,21 @@ body * {
 
   .carousel-control-prev-icon,
   .carousel-control-next-icon {
-    background-size: 50% 50%;
+    background-size: 45% 45%;
+  }
+}
+
+/* Small screens */
+@media (max-width: 480px) {
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 25px;
+    height: 25px;
+  }
+
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    background-size: 40% 40%;
   }
 }
 
