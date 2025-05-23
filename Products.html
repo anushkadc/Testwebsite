@@ -55,6 +55,31 @@
     object-fit: fill;
   }
 }
+.app_box_img {
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  z-index: 2;
+  margin-top: 100px;
+}
+
+.app_box_img img {
+  width: 100%;
+  height: auto;
+  display: block;
+  z-index: 2;
+}
+
+  
+@media (max-width: 768px) {
+  .pro_box_img img {
+    height: auto;/* Adjust for smaller devices */
+    object-fit: fill;
+  }
+}
+
+  
 
 
 
@@ -857,9 +882,8 @@
 
 
   <section class="ApparelRange">
-  <div class="pro_box_img">
+  <div class="app_box_img">
   <img src="Products/apparel_bg.webp" alt="ApparelRange" loading="lazy">
- <section class="hidden"> <div class="overlay-text">Apparel Range</div></section>
 </div>
 <div class="apparel-section">
 <section class="hidden"><h2 class="apparel-heading"  data-aos="fade-up" data-aos-duration="1000">Womenswear</h2></section>
