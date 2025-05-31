@@ -55,35 +55,34 @@
     object-fit: fill;
   }
 }
-.app_box_img {
+.about_box_img {
   position: relative;
   width: 100%;
   height: auto;
   overflow: hidden;
   z-index: 2;
-  margin-top: 100px;
 }
 
-.app_box_img img {
+/* Make image scale better and more prominently */
+.about_box_img img {
   width: 100%;
   height: auto;
   display: block;
   z-index: 2;
+  object-fit: cover; /* Ensures image fills the box */
 }
 
-  
-@media (max-width: 768px) {
-  .app_box_img img {
-    height: 200px;/* Adjust for smaller devices */
-    object-fit: fill;
+/* On mobile: make the image appear larger */
+@media (max-width: 767px) {
+  .about_box_img {
+    min-height: 300px; /* Increase height for mobile */
+  }
+
+  .about_box_img img {
+    height: 100%;
+    object-fit: cover;
   }
 }
-
-  
-
-
-
-
 
 
 
