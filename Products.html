@@ -596,6 +596,204 @@
 
     }
 
+      .strip{
+      margin-top: 10px;
+      background-color: #183b4e;
+      height: 2px;
+      width: 100%;
+      opacity: 0.2;
+    }
+
+    .sizes{
+       color: black;
+       margin-top: 10px;
+      
+    }
+
+.scarf-section {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.scarf-row {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Card Styling */
+.scarf_card_large {
+  width: 350px;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease;
+}
+
+.scarf_card_large:hover {
+  transform: scale(1.03);
+}
+
+.scarf_card_large img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-bottom: 1px solid #ddd;
+}
+
+.scarf_info_box {
+  padding: 20px;
+  text-align: center;
+}
+
+.scarf_info_box h3 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  color: #205781;
+  text-align: left;
+}
+
+.scarf_info_box hr {
+  border: none;
+  height: 1px;
+  background-color: #999;
+  margin: 10px auto;
+  width: 100%;
+}
+
+.scarf_info_box ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  text-align: left;
+  margin-top: 10px;
+  color: #444;
+}
+
+/* Center single card */
+.center-single {
+  display: flex;
+  justify-content: center;
+}
+
+/* 🔁 Responsive Breakpoints */
+@media (max-width: 1024px) {
+  .scarf_card_large {
+    width: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .scarf-row {
+    gap: 20px;
+  }
+
+  .scarf_card_large {
+    width: 90%; /* adapt to screen width */
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 480px) {
+  .scarf_info_box {
+    padding: 15px;
+  }
+
+  .scarf_info_box h3 {
+    font-size: 1.2rem;
+  }
+}
+
+
+.bedlinen-section {
+  padding: 0.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.bedlinen-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 80%;
+  max-width: 700px;
+  min-width: 280px;
+  margin: 1rem auto;
+  transition: all 0.3s ease-in-out;
+}
+
+.bedlinen-img {
+  width: 100%;
+  height: auto;
+  max-height: 400px;
+  object-fit: cover;
+  border-bottom: 1px solid #eee;
+}
+
+.bedlinen-info {
+  padding: 2rem;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+.bedlinen-info ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  margin: 0;
+}
+
+.bedlinen-info p {
+  margin-top: 1rem;
+}
+
+.bedlinen-divider {
+  border: none;
+  border-bottom: 1px solid #ddd;
+  margin: 1rem 0;
+}
+
+/* 🌐 Responsive Tweaks */
+@media (max-width: 768px) {
+  .bedlinen-info {
+    padding: 1.5rem;
+  }
+
+  .bedlinen-img {
+    max-height: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .bedlinen-info {
+    padding: 1rem;
+  }
+
+  .bedlinen-img {
+    max-height: 250px;
+  }
+}
+
+
+
+/* Optional: Smooth scroll for all anchor jumps */
+html {
+  scroll-behavior: smooth;
+}
+
+
+
+
+
 
 
 
@@ -1368,60 +1566,159 @@
 
   </div> <!--end of row1-->
 
+
+
+<!-- Scarves Section -->
 <div class="apparel-section">
-  <h2 class="apparel-heading"  data-aos="fade-right" data-aos-duration="1000">Value Addition</h2>
+  <section class="hidden">
+    <h2 class="apparel-heading" data-aos="fade-up" data-aos-duration="1000">Scarves</h2>
+  </section>
 </div>
+
 <div class="color-strip1"></div>
-<!-- Swiper -->
+
+<section class="scarf-section">
+  <div class="scarf-row">
+    <!-- Cashmere -->
+    <div class="scarf_card_large">
+      <img src="Products/new_items/scc.webp" alt="Cashmere Scarves">
+      <div class="scarf_info_box">
+        <h3>Cashmere</h3>
+        <hr>
+        <ul>
+          <li>70 x 180cm</li>
+          <li>70 x 200cm</li>
+          <li>100 x 200cm</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Silks -->
+    <div class="scarf_card_large">
+      <img src="Products/new_items/sc.webp" alt="Silk Scarves">
+      <div class="scarf_info_box">
+        <h3>Silk</h3>
+        <hr>
+        <ul>
+          <li>80 x 80cm</li>
+          <li>90 x 90cm</li>
+          <li>100 x 100cm</li>
+        </ul>
+      </div>
+    </div>
+    <!-- Row 2: Modals centered -->
+<div class="scarf-row center-single">
+  <div class="scarf_card_large">
+    <img src="Products/new_items/sccc.webp" alt="Modal Scarves">
+    <div class="scarf_info_box">
+       <h3>Modal</h3>
+        <hr>
+        <ul>
+          <li>70 x 180cm</li>
+          <li>70 x 200cm</li>
+          <li>100 x 200cm</li>
+        </ul>
+
+    
+    </div>
+  </div>
+</div>
+
+
+  </div>
+
+
+</section><!--end of scarves-->
+
+
+
+
+
+
+<section id="homeL" class="bedlinen-wrapper">
+  <div>&nbsp;</div>
+  <div class="apparel-section text-center">
+    <h2 class="apparel-heading" data-aos="fade-up" data-aos-duration="1000">Bed Linen</h2>
+  </div>
+
+  <div class="color-strip1"></div>
+
+  <div class="bedlinen-section">
+    <div class="bedlinen-card">
+      <img src="Products/new_items/bedL.webp" alt="Bed Linen" class="bedlinen-img" />
+      <div class="bedlinen-info">
+        <ul>
+          <li>Satin</li>
+          <li>Satin stripes</li>
+          <li>Percale</li>
+        </ul>
+        <div class="strip"></div>
+        <p>Fabrics from 200TC to 600TC</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section id="value" class="value-add-wrapper">
+
+  <div class="apparel-section">
+    <h2 class="apparel-heading" data-aos="fade-right" data-aos-duration="1000">Value Addition</h2>
+  </div>
+
+  <div class="color-strip1"></div>
+
   <div class="swiper mySwiper">
     <div class="swiper-wrapper">
-
+      <!-- Slides -->
       <div class="swiper-slide">
         <div class="value-card">
-          <img src="value_addition/value_1.webp" alt="Applique">
+          <img src="Products/value_addition/value_1.webp" alt="Applique">
           <h5 class="category-title">Applique</h5>
         </div>
       </div>
-
       <div class="swiper-slide">
         <div class="value-card">
-          <img src="value_addition/value_2.webp" alt="Embroidery">
+          <img src="Products/value_addition/value_2.webp" alt="Embroidery">
           <h5 class="category-title">Embroidery</h5>
         </div>
       </div>
-
       <div class="swiper-slide">
         <div class="value-card">
-          <img src="value_addition/value_4.webp" alt="Hand Paint">
+          <img src="Products/value_addition/value_3.webp" alt="Smocking">
+          <h5 class="category-title">Smocking</h5>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="value-card">
+          <img src="Products/value_addition/value_4.webp" alt="Hand Paint">
           <h5 class="category-title">Hand Paint</h5>
         </div>
       </div>
-
       <div class="swiper-slide">
         <div class="value-card">
-          <img src="value_addition/value_5.webp" alt="Placement Print">
+          <img src="Products/value_addition/value_5.webp" alt="Placement Print">
           <h5 class="category-title">Placement Print</h5>
         </div>
       </div>
-
       <div class="swiper-slide">
         <div class="value-card">
-          <img src="value_addition/value_6.webp" alt="Foil Print">
+          <img src="Products/value_addition/value_6.webp" alt="Foil Print">
           <h5 class="category-title">Foil Print</h5>
         </div>
       </div>
-
     </div>
 
-    <!-- Navigation arrows (desktop only) -->
+    <!-- Arrows -->
     <div class="swiper-button-next"></div>
     <div class="swiper-button-prev"></div>
   </div>
 
-<div class="scroll-hint">Swipe to see more →</div>
+  <div class="scroll-hint">Swipe to see more →</div>
+</section>
 
-</section>
-</section>
+
+
 
  
 <div class="color-strip_footer"></div>
@@ -1506,6 +1803,22 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   </script>
+
+
+      <script>
+  window.addEventListener('load', () => {
+    const hash = window.location.hash;
+    if (hash) {
+      // Delay re-scroll to ensure layout is stable (images, carousels, AOS etc.)
+      setTimeout(() => {
+        const target = document.querySelector(hash);
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }, 800); // 500ms is usually enough; increase if still glitchy
+    }
+  });
+</script>
   
 <!-- Bootstrap JS (required for carousel) -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
