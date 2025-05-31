@@ -414,11 +414,25 @@
   z-index: 2;
 }
 
+/* Make image scale better and more prominently */
 .about_box_img img {
   width: 100%;
   height: auto;
   display: block;
   z-index: 2;
+  object-fit: cover; /* Ensures image fills the box */
+}
+
+/* On mobile: make the image appear larger */
+@media (max-width: 767px) {
+  .about_box_img {
+    min-height: 300px; /* Increase height for mobile */
+  }
+
+  .about_box_img img {
+    height: 100%;
+    object-fit: cover;
+  }
 }
 
 .overlay-text {
@@ -436,24 +450,6 @@
   white-space: nowrap;
 
 }
-@media (max-width: 480px) {
-  .overlay-text {
-    font-size: 3vw;
-    padding: 0.3rem 1rem;
-  }
-
-}
-
-@media only screen and (max-width: 500px) {
-
- .overlay-text {
-    font-size: 3vw; /* Larger font on small screens */
-    padding: 0.3rem 1.2rem;
-  }
-}
-
-
-
 
 .team{
   text-align: center;
@@ -463,53 +459,6 @@
 
 }
 
-
-.founder-card {
-  background-color: transparent;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-  text-align: center;
-  opacity: 0;
-  transform: translateY(40px);
-
-}
-.color-bar{
- 
-  height: 4px;
-  width: 100%;
- background: linear-gradient(to right, #E52020, #FBA518, #7E1891,#A6F1E0);
-
-}
-.founder-card.visible {
-  animation: fadeInUp 0.8s ease forwards;
-}
-
-@keyframes fadeInUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-
-@keyframes slideInDown {
-  0% {
-    opacity: 0;
-    transform: translateY(-30px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-.color-strip2 {
-  display: flow;
-  width: 50%;
-  height: 8px; /* You can adjust the thickness */
-  
-}
 
 .color-block2 {
   flex: 1;
